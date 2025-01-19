@@ -1,12 +1,31 @@
-import React from 'react';
+import dynamic from "next/dynamic";
 
-import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow, Column } from '@/once-ui/components';
-import { Projects } from '@/components/work/Projects';
+// Dynamically import TypewriterEffect with SSR disabled
+const TypewriterEffect = dynamic(
+	() => import("@/components/TypewriterEffect"),
+	{
+		ssr: false, // Disable SSR for this component
+	}
+);
 
-import { baseURL, routes } from '@/app/resources'; 
-import { home, about, person, newsletter } from '@/app/resources/content';
-import { Mailchimp } from '@/components';
-import { Posts } from '@/components/blog/Posts';
+import React from "react";
+
+import {
+	Heading,
+	Flex,
+	Text,
+	Button,
+	Avatar,
+	RevealFx,
+	Arrow,
+	Column,
+} from "@/once-ui/components";
+import { Projects } from "@/components/work/Projects";
+
+import { baseURL, routes } from "@/app/resources";
+import { home, about, person, newsletter } from "@/app/resources/content";
+import { Mailchimp } from "@/components";
+import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
 	const title = home.title;
@@ -19,7 +38,7 @@ export async function generateMetadata() {
 		openGraph: {
 			title,
 			description,
-			type: 'website',
+			type: "website",
 			url: `https://${baseURL}`,
 			images: [
 				{
@@ -29,7 +48,7 @@ export async function generateMetadata() {
 			],
 		},
 		twitter: {
-			card: 'summary_large_image',
+			card: "summary_large_image",
 			title,
 			description,
 			images: [ogImage],
@@ -39,50 +58,60 @@ export async function generateMetadata() {
 
 export default function Home() {
 	return (
-		<Column
-			maxWidth="m" gap="xl"
-			alignItems="center">
+		<Column maxWidth="m" gap="xl" alignItems="center">
 			<script
 				type="application/ld+json"
 				suppressHydrationWarning
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebPage',
+						"@context": "https://schema.org",
+						"@type": "WebPage",
 						name: home.title,
 						description: home.description,
 						url: `https://${baseURL}`,
 						image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
 						publisher: {
-							'@type': 'Person',
+							"@type": "Person",
 							name: person.name,
 							image: {
-								'@type': 'ImageObject',
+								"@type": "ImageObject",
 								url: `${baseURL}${person.avatar}`,
 							},
 						},
 					}),
 				}}
 			/>
-			<Column
-				fillWidth
-				paddingY="l" gap="m">
-				<Column
-					maxWidth="s">
+			<Column fillWidth paddingY="l" gap="m">
+				<Column maxWidth="s">
 					<RevealFx
-						translateY="4" fillWidth justifyContent="flex-start" paddingBottom="m">
-						<Heading
-							wrap="balance"
-							variant="display-strong-l">
-							{home.headline}
+						translateY="4"
+						fillWidth
+						justifyContent="flex-start"
+						paddingBottom="m"
+					>
+						<Heading wrap="balance" variant="display-strong-l">
+							{
+								<TypewriterEffect
+									strings={home.headline}
+									typingSpeed={100}
+									deletingSpeed={50}
+									delayBetweenStrings={1300}
+								/>
+							}
 						</Heading>
 					</RevealFx>
 					<RevealFx
-						translateY="8" delay={0.2} fillWidth justifyContent="flex-start" paddingBottom="m">
+						translateY="8"
+						delay={0.2}
+						fillWidth
+						justifyContent="flex-start"
+						paddingBottom="m"
+					>
 						<Text
 							wrap="balance"
 							onBackground="neutral-weak"
-							variant="heading-default-xl">
+							variant="heading-default-xl"
+						>
 							{home.subline}
 						</Text>
 					</RevealFx>
@@ -93,47 +122,39 @@ export default function Home() {
 							href="/about"
 							variant="secondary"
 							size="m"
-							arrowIcon>
-							<Flex
-								gap="8"
-								alignItems="center">
+							arrowIcon
+						>
+							<Flex gap="8" alignItems="center">
 								{about.avatar.display && (
 									<Avatar
-										style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
+										style={{ marginLeft: "-0.75rem", marginRight: "0.25rem" }}
 										src={person.avatar}
-										size="m"/>
-									)}
-									{about.title}
+										size="m"
+									/>
+								)}
+								{about.title}
 							</Flex>
 						</Button>
 					</RevealFx>
 				</Column>
 			</Column>
 			<RevealFx translateY="16" delay={0.6}>
-				<Projects range={[1,1]}/>
+				<Projects range={[1, 1]} />
 			</RevealFx>
-			{routes['/blog'] && (
-				<Flex
-					fillWidth gap="24"
-					mobileDirection="column">
+			{routes["/blog"] && (
+				<Flex fillWidth gap="24" mobileDirection="column">
 					<Flex flex={1} paddingLeft="l">
-						<Heading
-							as="h2"
-							variant="display-strong-xs"
-							wrap="balance">
+						<Heading as="h2" variant="display-strong-xs" wrap="balance">
 							Latest from the blog
 						</Heading>
 					</Flex>
-					<Flex
-						flex={3} paddingX="20">
-						<Posts range={[1,2]} columns="2"/>
+					<Flex flex={3} paddingX="20">
+						<Posts range={[1, 2]} columns="2" />
 					</Flex>
 				</Flex>
 			)}
-			<Projects range={[2]}/>
-			{ newsletter.display &&
-				<Mailchimp newsletter={newsletter} />
-			}
+			<Projects range={[2]} />
+			{newsletter.display && <Mailchimp newsletter={newsletter} />}
 		</Column>
 	);
 }
