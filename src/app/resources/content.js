@@ -56,11 +56,9 @@ const home = {
 	headline: ["Software Engineer", "Fullstack Developer", "Problem Solver"],
 	subline: (
 		<>
-			I'm Ankit Raj, a software developer in <InlineCode>BSES Delhi</InlineCode>
-			, where I design and develop
-			<br /> end-to-end solutions, from APIs to full-stack web apps.
-			<br />After hours, I wander around to satiate my curiosity
-			<br /> by DSA problem solving, and work on personal projects.
+			I'm Ankit Raj, a Fullstack Developer in <InlineCode>BSES Delhi</InlineCode> ,
+			<br />transforming ideas into coded solutions.
+			<br />I can do Frontend, Backend Development and Integrating AI solutions.
 		</>
 	),
 };
