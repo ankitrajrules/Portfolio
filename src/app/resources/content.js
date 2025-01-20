@@ -9,6 +9,7 @@ const person = {
 	role: "Software Engineer",
 	avatar: "/images/avatar.jpg",
 	location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+	situated: "India, New Delhi",
 	languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
