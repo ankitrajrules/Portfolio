@@ -66,7 +66,7 @@ export const Header = () => {
                     textVariant="body-default-s">
                     { display.location && (
                         <Flex hide="s">
-                            {person.location}
+                            {person.situated}
                         </Flex>
                     )}
                 </Flex>
@@ -123,7 +123,7 @@ export const Header = () => {
                                         selected={pathname.startsWith('/work')}/>
                                 </>
                             )}
-                            { routes['/blog'] && (
+                            {/* { routes['/blog'] && (
                                 <>
                                     <ToggleButton
                                         className="s-flex-hide"
@@ -137,7 +137,7 @@ export const Header = () => {
                                         href="/blog"
                                         selected={pathname.startsWith('/blog')}/>
                                 </>
-                            )}
+                            )} */}
                             { routes['/gallery'] && (
                                 <>
                                     <ToggleButton
