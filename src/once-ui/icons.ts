@@ -74,5 +74,5 @@ export const iconLibrary: Record<string, IconType> = {
 	clipboard: HiClipboard,
 	arrowUpRightFromSquare: HiArrowTopRightOnSquare,
 	downloadLines: MdOutlineFileDownload,
-	downloadHi: HiArrowDownTray
+	downloadHi: HiArrowDownTray,
 };
