@@ -6,6 +6,7 @@ import {
 	HiChevronRight,
 	HiChevronLeft,
 	HiArrowUpRight,
+	HiArrowDownTray,
 	HiOutlineArrowPath,
 	HiCheck,
 	HiMiniQuestionMarkCircle,
@@ -38,6 +39,10 @@ import {
 	FaXTwitter,
 } from "react-icons/fa6";
 
+import {
+	MdOutlineFileDownload
+} from "react-icons/md";
+
 export const iconLibrary: Record<string, IconType> = {
 	chevronUp: HiChevronUp,
   chevronDown: HiChevronDown,
@@ -67,5 +72,7 @@ export const iconLibrary: Record<string, IconType> = {
 	linkedin: FaLinkedin,
 	x: FaXTwitter,
 	clipboard: HiClipboard,
-	arrowUpRightFromSquare: HiArrowTopRightOnSquare
+	arrowUpRightFromSquare: HiArrowTopRightOnSquare,
+	downloadLines: MdOutlineFileDownload,
+	downloadHi: HiArrowDownTray
 };
