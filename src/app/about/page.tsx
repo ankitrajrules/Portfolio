@@ -252,7 +252,7 @@ export default function About() {
                                                 </Text>
                                             ))}
                                         </Flex>
-                                        {experience.images.length > 0 && (
+                                        {/* {experience.images.length > 0 && (
                                             <Flex
                                                 fillWidth paddingTop="m" paddingLeft="40"
                                                 wrap>
@@ -272,7 +272,7 @@ export default function About() {
                                                     </Flex>
                                                 ))}
                                             </Flex>
-                                        )}
+                                        )} */}
                                     </Flex>
                                 ))}
                             </Flex>
@@ -337,7 +337,7 @@ export default function About() {
                                             onBackground="neutral-weak">
                                             {skill.description}
                                         </Text>
-                                        {skill.images && skill.images.length > 0 && (
+                                        {/* {skill.images && skill.images.length > 0 && (
                                             <Flex
                                                 fillWidth paddingTop="m" gap="12"
                                                 wrap>
@@ -357,7 +357,7 @@ export default function About() {
                                                     </Flex>
                                                 ))}
                                             </Flex>
-                                        )}
+                                        )} */}
                                     </Flex>
                                 ))}
                             </Flex>
