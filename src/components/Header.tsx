@@ -7,9 +7,10 @@ import {
 	Fade,
 	Flex,
 	ToggleButton,
-	SmartLink,
-	Icon,
-    IconButton
+	Button,
+	// SmartLink,
+	// Icon,
+    // IconButton
 } from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
 
@@ -61,17 +62,17 @@ export default TimeDisplay;
 
 export const Header = () => {
 	const pathname = usePathname() ?? "";
-    // //Download handler for the Resume 
-    // const handleDownload = () => {
-    //     // For static files in public folder
-    //     const link = document.createElement('a');
-    //     link.href = 'https://drive.google.com/file/d/1yqYczNDN_BJlT_4XdWz-odE-Rm8jyP6R/view?usp=sharing'; // Path relative to public directory
-    //     link.download = 'Ankit_Raj_Resume.pdf'; // Forces download with this filename
-    //     link.target = "_blank"
-    //     document.body.appendChild(link);
-    //     link.click();
-    //     document.body.removeChild(link);
-    //   };
+    //Download handler for the Resume 
+    const handleResumeDownload = () => {
+        // For static files in public folder
+        const link = document.createElement('a');
+        link.href = './resume/ankit-raj-net-mern.pdf'; // Path relative to public directory
+        link.download = 'Ankit_Raj_Resume.pdf'; // Forces download with this filename
+        link.target = "_blank"
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
 	return (
 		<>
 			<Fade hide="s" fillWidth position="fixed" height="80" zIndex={9} />
@@ -208,23 +209,30 @@ export const Header = () => {
 							{display.time && <TimeDisplay timeZone={person.location} />}
 						</Flex>
 						<Flex
-							border="brand-weak"
 							gap="24"
-							padding="8"
+							padding="4"
 							justifyContent="center"
 							alignItems="end"
 							radius="full"
 							onBackground="info-strong"
 							background="info-weak">
-                                <SmartLink
-                                    href="https://drive.google.com/file/d/1yqYczNDN_BJlT_4XdWz-odE-Rm8jyP6R/view?usp=sharing"
+								<Button
+									onClick={handleResumeDownload}
+									variant="tertiary"
+									size="s"
+									label="Resume"
+									suffixIcon="downloadHi"
+									/>
+                                {/* <SmartLink
+                                    // href="https://drive.google.com/file/d/1yqYczNDN_BJlT_4XdWz-odE-Rm8jyP6R/view?usp=sharing"
+									href="https://github.com/ankitrajrules/Resume/blob/main/Resume.tex"
                                     prefixIcon="openLink"
-                                    suffixIcon="HiMiniArrowDown"
+                                    suffixIcon="downloadHi"
                                     iconSize="xs">
                                         Resume
                                 </SmartLink>
-                                {/* <IconButton
-                                    onClick={handleDownload}
+                                <IconButton
+                                    onClick={handleResumeDownload}
                                     icon="downloadLines"
                                     size="s"
                                     tooltip="Download Ankit's Resume"
