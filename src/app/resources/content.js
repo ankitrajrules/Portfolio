@@ -151,41 +151,116 @@ const about = {
 		display: true, // set to false to hide this section
 		title: "Technical skills",
 		skills: [
+			// {
+			// 	title: "Figma",
+			// 	description: (
+			// 		<></>
+			// 	),
+			// 	images: [
+			// 		// {
+			// 		// 	src: "/images/projects/project-01/cover-02.jpg",
+			// 		// 	alt: "Project image",
+			// 		// 	width: 16,
+			// 		// 	height: 9,
+			// 		// },
+			// 		// {
+			// 		// 	src: "/images/projects/project-01/cover-03.jpg",
+			// 		// 	alt: "Project image",
+			// 		// 	width: 16,
+			// 		// 	height: 9,
+			// 		// },
+			// 	],
+			// },
 			{
-				title: "Figma",
+				title: "NextJs",
 				description: (
-					<>Able to prototype in Figma with Once UI with unnatural speed.</>
+					<></>
 				),
-				// optional: leave the array empty if you don't want to display images
 				images: [
-					{
-						src: "/images/projects/project-01/cover-02.jpg",
-						alt: "Project image",
-						width: 16,
-						height: 9,
-					},
-					{
-						src: "/images/projects/project-01/cover-03.jpg",
-						alt: "Project image",
-						width: 16,
-						height: 9,
-					},
+					// {
+					// 	src: "/images/projects/project-01/cover-04.jpg",
+					// 	alt: "Project image",
+					// 	width: 16,
+					// 	height: 9,
+					// },
 				],
 			},
 			{
-				title: "Next.js",
+				title: "Express.js",
 				description: (
-					<>Building next gen apps with Next.js + Once UI + Supabase.</>
+					<></>
 				),
-				// optional: leave the array empty if you don't want to display images
-				images: [
-					{
-						src: "/images/projects/project-01/cover-04.jpg",
-						alt: "Project image",
-						width: 16,
-						height: 9,
-					},
-				],
+				images: [],
+			},
+			{
+				title: "React.js",
+				description: (
+					<></>
+				),
+				images: [],
+			},
+			{
+				title: "Node.js",
+				description: (
+					<></>
+				),
+				images: [],
+			},
+			{
+				title: "MongoDB",
+				description: (
+					<></>
+				),
+				images: [],
+			},
+			{
+				title: "Java",
+				description: (
+					<></>
+				),
+				images: [],
+			},
+			{
+				title: "Spring Framework",
+				description: (
+					<></>
+				),
+				images: [],
+			},
+			{
+				title: "Python",
+				description: (
+					<></>
+				),
+				images: [],
+			},
+			{
+				title: "FastAPI",
+				description: (
+					<></>
+				),
+				images: [],
+			},
+			{
+				title: "Django",
+				description: (
+					<></>
+				),
+				images: [],
+			},
+			{
+				title: "PostgreSQL",
+				description: (
+					<></>
+				),
+				images: [],
+			},
+			{
+				title: "Oracle DB",
+				description: (
+					<></>
+				),
+				images: [],
 			},
 		],
 	},
