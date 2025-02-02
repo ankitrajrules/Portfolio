@@ -101,7 +101,7 @@ const about = {
 				achievements: [
 					<>
 						Reverse Engineered the whole Grid Automatic Meter Reading 
-						System and fetching more than 4x more parameters resulting scalable and robust system resulting in 40% reduction of manual effort.
+						System and fetching more than 4x more parameters resulting in scalable and robust system with 40% reduction of manual effort.
 					</>,
 					<>
 						Revamped a legacy desktop app by integrating USB communication
