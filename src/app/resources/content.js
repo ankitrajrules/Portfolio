@@ -100,22 +100,22 @@ const about = {
 				role: "Software Development Engineer - Fullstack",
 				achievements: [
 					<>
-						Redesigned the UI/UX for the FLY platform, resulting in a 20%
-						increase in user engagement and 30% faster load times.
+						Reverse Engineered the whole Grid Automatic Meter Reading 
+						System and fetching more than 4x more parameters resulting scalable and robust system resulting in 40% reduction of manual effort.
 					</>,
 					<>
-						Spearheaded the integration of AI tools into design workflows,
-						enabling designers to iterate 50% faster.
+						Revamped a legacy desktop app by integrating USB communication
+						with SCP file transfers, boosting data speeds by 3x.
 					</>,
 				],
 				images: [
-					// optional: leave the array empty if you don't want to display images
-					{
-						src: "/images/projects/project-01/cover-01.jpg",
-						alt: "Once UI Project",
-						width: 16,
-						height: 9,
-					},
+					// // optional: leave the array empty if you don't want to display images
+					// {
+					// 	src: "/images/projects/project-01/cover-01.jpg",
+					// 	alt: "Once UI Project",
+					// 	width: 16,
+					// 	height: 9,
+					// },
 				],
 			},
 			{
@@ -124,12 +124,13 @@ const about = {
 				role: "Graduate Engineer Trainee",
 				achievements: [
 					<>
-						Developed a design system that unified the brand across multiple
-						platforms, improving design consistency by 40%.
+						Successfully converted 20+ SOAP APIs into RESTful services 
+						leading to a 24% increase in data processing speed.
 					</>,
 					<>
-						Led a cross-functional team to launch a new product line,
-						contributing to a 15% increase in overall company revenue.
+						Collaborated with backend and frontend teams to integrate JWT authentication 
+						and silent refresh token functionality across multiple applications, 
+						ensuring smooth interoperability and consistency.
 					</>,
 				],
 				images: [],
