@@ -9,7 +9,7 @@ const person = {
 	role: "Software Engineer",
 	avatar: "/images/avatar.jpg",
 	location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-	situated: "India, New Delhi",
+	situated: "India, Delhi",
 	languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
@@ -56,7 +56,7 @@ const home = {
 	headline: ["Software Engineer", "Fullstack Developer", "Problem Solver"],
 	subline: (
 		<>
-			I'm Ankit Raj, a Fullstack Developer in <InlineCode>BSES Delhi</InlineCode> ,
+			I'm Ankit Raj, a Software Developer in <InlineCode>BSES Delhi</InlineCode> ,
 			<br />transforming ideas into coded solutions.
 			<br />I can do Frontend, Backend Development and Integrating AI solutions.
 		</>
